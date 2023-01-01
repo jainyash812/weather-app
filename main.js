@@ -2,10 +2,18 @@ const api = {
   key: "f4ccf89d0886efb09c9ec866c84de274",
   base: "https://api.openweathermap.org/data/2.5/"
 }
+// date calculation //
+var date = new Date(); 
+var dd = date.getDate(); 
+var mm = date.getMonth() + 1; 
+var yyyy = date.getFullYear(); 
+var newDate = dd + "-" + mm + "-" +yyyy; 
+// date calculation //
 
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
-
+const dateElement = document.querySelector('.date');
+dateElement.innerHTML = new Date();
 
 function setQuery(evt) {
   if (evt.keyCode == 13) {
