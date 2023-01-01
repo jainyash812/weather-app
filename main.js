@@ -3,17 +3,17 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 }
 // date calculation //
-var date = new Date(); 
-var dd = date.getDate(); 
-var mm = date.getMonth() + 1; 
-var yyyy = date.getFullYear(); 
-var newDate = dd + "-" + mm + "-" +yyyy; 
+let date = new Date(); 
+let dd = date.getDate(); 
+let mm = date.getMonth() + 1; 
+let yyyy = date.getFullYear(); 
+let newDate = dd + "-" + mm + "-" +yyyy; 
 // date calculation //
 
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
 const dateElement = document.querySelector('.date');
-dateElement.innerHTML = new Date();
+dateElement.innerHTML = newDate;
 
 function setQuery(evt) {
   if (evt.keyCode == 13) {
